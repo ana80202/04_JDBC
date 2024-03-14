@@ -1,0 +1,30 @@
+package edu.kh.jdbc1;
+
+import java.sql.Connection;
+
+public class JDBCExample1 {
+	
+	public static void main(String[] args) {
+		
+		// JDBC (Java DataBase Connectivity) : Java에서 DB에 연결할 수 있게 해주는 Java Programming API (Java에 기존 내장된 인터페이스)
+		// java.sql 패키지에서 제공
+		
+		//* JDBC를 이용한 어플리케이션 만들때 필요한 것*
+		//1. Java의 JDBC 관련 인터페이스
+		//2. DBMS (Oracle)
+		//3. Oracle에서 Java 와 연결할때 사용할
+		//   JDBC 를 상속받아 구현할 클래스 모음(ojdbc10.jar라이브러리)
+	
+		//1단계 : JDBC 객체 참조 변수 선언(java.sql 패키지의 인터페이스)
+		
+		Connection conn = null;
+		//DB 연결 정보를 담을 객체
+		//-> DBMS 타입, 이름, IP, Port, 계정명, 비밀번호 저장
+		
+		
+		
+		
+		
+		
+	}
+}
