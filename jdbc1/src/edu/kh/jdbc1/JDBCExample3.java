@@ -39,7 +39,7 @@ public class JDBCExample3 {
 			String user = "kh_cdy"; //사용자 계정
 			String pw = "kh_cdy"; //비밀번호
 			
-			conn = DriverManager.getConnection(type+ip+port+sid, user,pw );
+			conn = DriverManager.getConnection(type+ip+port+sid, user,pw );  
 			
 			//sql 작성
 			String sql = "SELECT EMP_NAME,NVL(DEPT_TITLE, '부서없음') AS DEPT_TITLE ,SALARY"
