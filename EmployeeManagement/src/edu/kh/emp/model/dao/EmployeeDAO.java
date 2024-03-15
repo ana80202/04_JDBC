@@ -190,6 +190,39 @@ public class EmployeeDAO {
 		return emp;
 	}
 
+	/** 사번이 일치하는 사원 정보 수정 DAO
+	 * @param conn
+	 * @param empId
+	 * @return
+	 */
+	public Employee updateEmployee(Connection conn, int empId) throws Exception {
+		
+		Employee emp = null;
+		
+		try {
+			
+            String sql = prop.getProperty("updateEmployee");
+			
+			pstmt = conn.prepareStatement(sql); // ?(placehoider)있으니까 Statement 준비해 줘야함
+			
+			pstmt.setInt(1, empId); //값 세팅해주기
+			
+			
+			
+			
+			
+			
+		}finally {
+			 close(rs);
+			 close(pstmt);
+			
+		}
+		return emp;
+		
+		
+		
+	}
+
 	
 	
 	

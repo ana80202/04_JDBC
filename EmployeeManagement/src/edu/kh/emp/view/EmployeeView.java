@@ -205,6 +205,34 @@ public class EmployeeView {
 	 * 
 	 */
 	public void updateEmployee() {
+		System.out.println("<사번이 일치하는 사원 정보 수정>");
+		
+		int empId = inputEmpId();
+		
+		Employee emp = service.updateEmployee(empId);
+		
+		System.out.print("이메일 : ");
+		String email = sc.next();
+		
+		System.out.print("전화번호 : ");
+		String phone = sc.next();
+		
+		System.out.print("급여 : ");
+		int salary = sc.nextInt();
+		
+		
+    Employee emp = new Employee(empId,email,phone,salary);
+		
+		int result = service.updateEmployee(emp);
+		
+		if(result > 0) {
+			System.out.println("사원 정보 수정 성공");
+		}else {
+			System.out.println("사원 정보 수정 실패!");
+		}
+		
+		
+		
 		
 	}
 	

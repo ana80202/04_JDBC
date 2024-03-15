@@ -64,6 +64,23 @@ public class EmployeeService {
 
 		return emp;
 	}
+
+
+
+	/** 입력 받은 사원 정보 수정 서비스
+	 * @param empId
+	 * @return
+	 */
+	public Employee updateEmployee(int empId) throws Exception {
+		
+		Connection conn = getConnection();
+		
+		Employee emp = dao.updateEmployee(conn,empId);
+		
+		close(conn);
+		
+		return emp;
+	}
 	
 	
 	
