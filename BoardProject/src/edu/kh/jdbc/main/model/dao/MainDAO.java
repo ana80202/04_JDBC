@@ -60,6 +60,7 @@ public class MainDAO {
 			rs = pstmt.executeQuery(); //select는 excuteQuery임! //SELECT 수행 후 결과 반환 받기
 			
 			//3.조회 결과를 1행씩 접근해서 얻어오기
+
 			if(rs.next()) {
 				int memberNo = rs.getInt("MEMBER_NO");
 				//String memberId = rs.getString("memberId");

@@ -138,7 +138,7 @@ public class EmployeeDAO {
 		try {
 			String sql = prop.getProperty("selectEmpId");
 			
-			pstmt = conn.prepareStatement(sql); // ?(placehoider)있으니까 Statement 준비해 줘야함
+			pstmt = conn.prepareStatement(sql); // ?(placeholder)있으니까 Statement 준비해 줘야함
 			
 			pstmt.setInt(1, empId); //값 세팅해주기
 			
@@ -192,20 +192,21 @@ public class EmployeeDAO {
 
 	/** 사번이 일치하는 사원 정보 수정 DAO
 	 * @param conn
-	 * @param empId
+	 * @param emp2
 	 * @return
 	 */
-	public Employee updateEmployee(Connection conn, int empId) throws Exception {
+	public Employee updateEmployee(Connection conn, Employee emp2) throws Exception {
 		
 		Employee emp = null;
 		
 		try {
 			
             String sql = prop.getProperty("updateEmployee");
+            
 			
-			pstmt = conn.prepareStatement(sql); // ?(placehoider)있으니까 Statement 준비해 줘야함
+			pstmt = conn.prepareStatement(sql); // ?(placeholder)있으니까 Statement 준비해 줘야함
 			
-			pstmt.setInt(1, empId); //값 세팅해주기
+			pstmt.setInt(1, emp2); //값 세팅해주기
 			
 			
 			

@@ -31,8 +31,26 @@
      UPDATE "BOARD" SET
      READ_COUNT = READ_COUNT + 1
      WHERE BOARD_NO =?
-     
     </entry>   	
+   	
+   	<!--게시글 수정  -->
+   	<entry key = "updateBoard">
+   	UPDATE "BOARD" SET
+   	BOARD_TITLE = ?,
+   	BOARD_CONTENT = ?
+   	WHERE BOARD_NO = ?
+   	</entry>
+   	
+   	<!-- 다음 게시물 번호 조회 -->
+   	<entry key = "nextBoardNo">
+   	SELECT SEQ_BOARD_NO.NEXTVAL FROM DUAL
+   	</entry>
+   	
+   	<!--게시글 삽입  -->
+   	<entry key = "insertBoard">
+   	INSERT INTO "BOARD"
+	VALUES(?, ?, ?,DEFAULT, DEFAULT, DEFAULT, ?)
+   	</entry>
    	
    	
    	

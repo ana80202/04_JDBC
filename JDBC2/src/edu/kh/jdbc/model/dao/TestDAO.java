@@ -55,7 +55,7 @@ public class TestDAO {
 			pstmt = conn.prepareStatement(sql);
 			
 			//4. 위치 홀더(?)에 알맞은 값 세팅
-			pstmt.setInt(1,vo1.getTestNo());  // 1
+			pstmt.setInt(1,vo1.getTestNo()); // 1
 			pstmt.setString(2, vo1.getTestTitle()); //제목1
 			pstmt.setString(3, vo1.getTestContent()); // 내용1
 			

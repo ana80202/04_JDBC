@@ -13,7 +13,7 @@
 	</entry>
 	
 	<entry key = "insertEmployee">
-			INSERT INTO EMPLOYEE VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? , SYSDATE, NULL, DEFAULT)
+	INSERT INTO EMPLOYEE VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? , SYSDATE, NULL, DEFAULT)
 			
 	</entry>
 	
