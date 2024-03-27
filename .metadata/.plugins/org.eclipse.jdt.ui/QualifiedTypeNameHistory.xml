@@ -46,8 +46,8 @@
     <fullyQualifiedTypeName name="edu.kh.board.view.CommentView"/>
     <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="edu.kh.board.model.service.BoardService"/>
     <fullyQualifiedTypeName name="edu.kh.jdbc.common.Session"/>
     <fullyQualifiedTypeName name="edu.kh.jdbc.common.JDBCTemplate"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
 </qualifiedTypeNameHistroy>

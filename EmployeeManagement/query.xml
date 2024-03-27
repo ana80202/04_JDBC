@@ -27,17 +27,12 @@
 	</entry>
 	
 	<entry key = "updateEmployee">
-	
-	UPDATE EMPLOYEE SET EMAIL = '?' WHERE EMP_ID = ?
-	UPDATE EMPLOYEE SET PHONE = '?' WHERE EMP_ID = ?
-	UPDATE EMPLOYEE SET SALARY = '?' WHERE EMP_ID = ?
+	UPDATE EMPLOYEE SET
+	EMAIL = ?, PHONE = ?, SALARY = ?
+	WHERE EMP_ID = ?
 	</entry>
 	
 	
-	<entry key = "deleteEmployee">
-	
-	
-	</entry>
 	
 	
 	

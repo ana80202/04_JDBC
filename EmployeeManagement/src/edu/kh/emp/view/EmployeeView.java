@@ -204,12 +204,10 @@ public class EmployeeView {
 	/**사번이 일치하는 사원정보 수정(이메일, 전화번호, 급여)
 	 * 
 	 */
-	public void updateEmployee() {
+	public void updateEmployee() throws Exception {
 		System.out.println("<사번이 일치하는 사원 정보 수정>");
 		
 		int empId = inputEmpId();
-		
-		Employee emp = service.updateEmployee(empId);
 		
 		System.out.print("이메일 : ");
 		String email = sc.next();
@@ -220,8 +218,13 @@ public class EmployeeView {
 		System.out.print("급여 : ");
 		int salary = sc.nextInt();
 		
+		Employee emp = new Employee();
 		
-    Employee emp = new Employee(empId,email,phone,salary);
+		emp.setEmpId(empId);
+		emp.setEmail(email);
+		emp.setPhone(phone);
+		emp.setSalary(salary);
+		
 		
 		int result = service.updateEmployee(emp);
 		

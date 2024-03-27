@@ -192,33 +192,31 @@ public class EmployeeDAO {
 
 	/** 사번이 일치하는 사원 정보 수정 DAO
 	 * @param conn
-	 * @param emp2
-	 * @return
+	 * @param emp
+	 * @return result
 	 */
-	public Employee updateEmployee(Connection conn, Employee emp2) throws Exception {
+	public Employee updateEmployee(Connection conn, Employee emp) throws Exception {
 		
-		Employee emp = null;
+		int result = 0;
 		
 		try {
 			
             String sql = prop.getProperty("updateEmployee");
             
-			
 			pstmt = conn.prepareStatement(sql); // ?(placeholder)있으니까 Statement 준비해 줘야함
 			
-			pstmt.setInt(1, emp2); //값 세팅해주기
+			pstmt.setString(1, emp.getEmail());
+			pstmt.setString(2, emp.getPhone());
+			pstmt.setInt(3, emp.getSalary());
+			pstmt.setInt(4, emp.getEmpId());
 			
-			
-			
-			
-
+			result = pstmt.executeUpdate();
 			
 		}finally {
-			 close(rs);
 			 close(pstmt);
-			
 		}
-		return emp;
+		
+		return result;
 		
 		
 		
